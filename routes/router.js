@@ -14,7 +14,7 @@ module.exports = function(app){
 
         response.json({
                 info: "Hello World", 
-                movie: req.queryString('movie')
+                movie: request.queryString('param')
             })
     })
 };
