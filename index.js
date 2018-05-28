@@ -17,8 +17,6 @@ app.engine('hbs', hbs({defaultLayout: 'main', extname: 'hbs'}));
 //Use handlebars as the templating engine
 app.set('view engine', 'hbs');
 
-//Use Middleware
-app.use(require('sanitize').middleware);
 
 //Setup Public directory
 app.use(express.static('public'));
