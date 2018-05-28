@@ -12,6 +12,9 @@ port = process.env.PORT || 5000;
 //Instantiate Express App
 const app = express();
 
+//Use Middleware
+app.use(require('sanitize').middleware);
+
 //Setup Public directory
 app.use(express.static('public'));
 
