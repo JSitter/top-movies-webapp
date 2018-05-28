@@ -1,0 +1,26 @@
+{
+  "name": "top-movies-webapp",
+  "version": "0.1.0",
+  "description": "Sample web app to demonstrate how to use get movie data and display using Express and Javascript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/JSitter/top-movies-webapp.git"
+  },
+  "keywords": [
+    "express",
+    "movies"
+  ],
+  "author": "Justin Sitter",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JSitter/top-movies-webapp/issues"
+  },
+  "homepage": "https://github.com/JSitter/top-movies-webapp#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
