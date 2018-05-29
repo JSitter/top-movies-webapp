@@ -7,7 +7,7 @@ This website is compatible with Mac and Linux. If you wish to run this site on a
 
 In order to run this web app on your machine you'll need NPM installed.
 
-Use the [NPM installation instructions](https://docs.npmjs.com/cli/install) if you haven't installed NPM on your system already. 
+Use the [NPM installation instructions](https://www.npmjs.com/get-npm) if you haven't installed NPM on your system already. 
 
 Otherwise open a terminal in the project directory and type
 
