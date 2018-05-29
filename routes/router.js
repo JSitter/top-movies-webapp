@@ -7,6 +7,7 @@ module.exports = function(app){
 
     let moviesRaw = {}
     let movies = {}
+
     //Helper functions here
     function getMoviesFromiTunes(){
         console.log("getting movies")
@@ -27,14 +28,13 @@ module.exports = function(app){
                     movie["summary"] = moviesRaw[index]["summary"].label
                     movie["itunes-link"] = moviesRaw[index]["id"].label
 
+
                     movies[movie["id"]] = movie 
                 }
 
                 resolve(movies)
             }).catch((err)=>{reject(err.message)})
         })
-
-
 
     };
 
@@ -43,18 +43,14 @@ module.exports = function(app){
         movie_id = request.params.movie_id
 
         console.log("looking up " + movie_id)
-        if(Object.keys(movies).length = 1){
-            getMoviesFromiTunes().then((movies)=>{
-                console.log("Got response from iTunes")
-                console.log(movies[movie_id].title)
-                let movie = movies[movie_id]
-                console.log(movie)
-                response.render('single-movie', {movie:movie})
-            })
-        }else{
-            console.log("Getting saved response")
-            response.render('single-movie', movies[movie_id])
-        }
+
+        getMoviesFromiTunes().then((movies)=>{
+            console.log("Got response from iTunes")
+            console.log(movies[movie_id].title)
+
+            let movie = movies[movie_id]
+            response.render('single-movie', {movie:movie})
+        })
 
     });
 
@@ -62,21 +58,10 @@ module.exports = function(app){
     app.get('/', function(request, response){
 
         getMoviesFromiTunes().then((movies)=>{
-            //response.render('all-movies', {movies: json.feed.entry})
-            // response.render('all-movies')
-            
-            response.render('all-movies', {movies: movies})
-                // console.log(json)
-                
-                // for( let index in movies.feed.entry){
-                //     response.render('all-movies', {movies: movies.feed.entry})
-                //     console.log(index)
-                // }
-                
-            
-        })
 
-        //response.render('all-movies')
+            response.render('all-movies', {movies: movies})
+  
+        })
 
     });
 };

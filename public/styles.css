@@ -1,5 +1,5 @@
 *{
-    color: red;
+    color: #333;
     margin: 0px;
     padding: 0px;
     border: 0px;
@@ -16,15 +16,24 @@ tr:hover{
     background-color: #dfdfdf;
 }
 
-#movie-info{
-    position: fixed;
-    top: calc(25%);
-    right: calc(10%);
-    width: 80%;
-    height: calc(vh - 100);
-    background-color: #222;
-    margin-right: auto;
-    margin-left: auto;
-    
+a:link{
+    color: rgb(94, 154, 245);
+}
 
+a:visited{
+    color: rgb(31, 160, 100);
+}
+
+img{
+    float: left;
+}
+
+.desc{
+    width: 100%;
+}
+
+.movie{
+    width: 100%;
+    display: block;
+    clear: both;
 }

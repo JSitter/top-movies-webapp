@@ -1,12 +1,19 @@
 <article>
-    <h1> {{movie.title}} </h1>
-    <img src={{movie.img-link}} alt="{{movie.title}}"/>
-    <p>{{movie.summary}}</p>
-    <video src="{{movie.trailer}}"></video>
+    <div class="desc">
+        <h1> {{movie.title}} </h1>
+        <a href="/">Return</a>
+        <img src={{movie.img-link}} alt="{{movie.title}}"/>
+        <p>{{movie.summary}}</p>
+    </div>
+    <div class="movie">
+         <embed src="{{movie.trailer}}"></video>
     <ul>
         <li>Released in {{movie.release-date}}</li>
         <li>Price to purchase {{movie.price}}</li>
     </ul>
-    <a href="{{movies.itunes-link}}"><button>View in App Store</button></a>
+
+    <a href={{movie.itunes-link}}><button>View in App Store</button></a>
+    </div>
+   
 
 </article>
