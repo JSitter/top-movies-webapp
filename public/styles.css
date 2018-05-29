@@ -1,5 +1,8 @@
 *{
     color: red;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
 }
 
 body{
@@ -9,3 +12,19 @@ body{
     flex-direction: column;
 }
 
+tr:hover{
+    background-color: #dfdfdf;
+}
+
+#movie-info{
+    position: fixed;
+    top: calc(25%);
+    right: calc(10%);
+    width: 80%;
+    height: calc(vh - 100);
+    background-color: #222;
+    margin-right: auto;
+    margin-left: auto;
+    
+
+}

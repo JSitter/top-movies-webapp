@@ -1,3 +1,21 @@
 <section>
-    This is a great movie.
+    <h1>
+        Top 25 Movies
+    </h1>
 </section>
+<section class="movie-list">
+    <table>
+        {{#each movies}}
+            <tr onClick="getMovie({{this.id}})">
+                <th  > <img src={{this.thumb-img}} alt="{{this.title}}"/> </th>
+                <th  > {{this.title}} </th>
+                <th  > {{this.release-date}} </th>
+                <th  > {{this.price}} </th>
+            </tr>
+        {{/each}}
+    </table>
+
+</section>
+{{!-- <section id="movie-info">
+    there ain't nothing here
+</section> --}}
